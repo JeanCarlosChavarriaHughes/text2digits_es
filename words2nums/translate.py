@@ -7,14 +7,15 @@ import string
 
 import coloredlogs
 
-from lang.es import numwords
-from lang.es import scales
-from lang.es import separator
-from lang.es import units
+from text2digits_es.words2nums.lang.es import numwords
+from text2digits_es.words2nums.lang.es import scales
+from text2digits_es.words2nums.lang.es import separator
+from text2digits_es.words2nums.lang.es import units
 
 coloredlogs.install(level='INFO')
 log = log.getLogger(__name__)
-locale.setlocale(locale.LC_ALL, 'es-es')
+# locale.setlocale(locale.LC_ALL, 'es-es')
+locale.setlocale(locale.LC_ALL, 'es_ES.UTF-8') #output of locale -a | grep -i es
 
 def is_avo(w=""):
     """
